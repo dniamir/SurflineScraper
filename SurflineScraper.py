@@ -165,8 +165,8 @@ class SurflineScraper(object):
 				                   ha='center', va='bottom', fontsize=12)
 			
 			# Add Weekday Labels
-			plt.gca().text(x=np.mean(x_data) - 1, y=np.max(wave_max_height) + 1.5,
-			               s=weekdays[i], fontsize=20)
+			plt.gca().text(x=np.mean(x_data), y=np.max(wave_max_height) + 1.5,
+			               s=weekdays[i * 4], fontsize=20, ha='center', va='center')
 		
 		plt.gca().yaxis.grid(True)
 		_ = plt.xticks(ticks=x, labels=x_labels, rotation=30, fontsize=14)
